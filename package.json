@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "pnpm build:react-yjs && pnpm --filter 'app' exec -- pnpm build",
+    "build:react-yjs": "pnpm --filter 'react-yjs' exec -- pnpm build",
+    "lint:check": "eslint examples packages --ext .ts,.tsx --max-warnings=0",
+    "release:patch": "pnpm run build && pnpm --filter 'react-yjs' exec -- npm version patch --no-workspaces-update && pnpm --filter 'react-yjs' exec -- pnpm publish --no-git-checks",
+    "release:dev": "pnpm run build && pnpm --filter 'react-yjs' exec -- npm version prerelease --preid=dev --no-workspaces-update && pnpm --filter 'react-yjs' exec -- pnpm publish  --tag dev --no-git-checks",
+    "release": "cp README.md packages/react-yjs/README.md && pnpm run build && pnpm --filter 'react-yjs' exec -- pnpm publish --no-git-checks && rm packages/react-yjs/README.md",
+    "test": "CI=true pnpm --parallel run test"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "prettier": "^3.3.2",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@9.3.0"
+}

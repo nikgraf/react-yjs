@@ -1,0 +1,4 @@
+```bash
+pnpm
+pnpm dev
+```
