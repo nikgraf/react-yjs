@@ -21,6 +21,10 @@ export const MyComponent = ({ yArray }) => {
 
 ```
 
+## Introduction Video (3:47min)
+
+https://github.com/nikgraf/react-yjs/assets/223045/f5cbf5d7-381e-4d4b-8bce-95bbaeb8083f
+
 ## Simple Usage
 
 ```tsx
