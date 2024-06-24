@@ -1,6 +1,6 @@
 {
   "name": "react-yjs",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "sideEffects": false,
   "type": "module",
   "exports": {
