@@ -22,6 +22,9 @@
     "build": "tsup",
     "dev": "tsup --watch"
   },
+  "dependencies": {
+    "lib0": "^0.2.94"
+  },
   "peerDependencies": {
     "react": "^18 || ^19",
     "yjs": "^13.6.16"

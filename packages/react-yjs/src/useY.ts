@@ -1,6 +1,6 @@
+import { equalityDeep } from "lib0/function";
 import { useRef, useSyncExternalStore } from "react";
 import * as Y from "yjs";
-import { deepEqual } from "./deepEqual.js";
 import { YJsonValue } from "./types.js";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,7 +20,7 @@ export function useY(yData: any): any {
     // Note: React requires reference equality
     () => {
       const data = yData.toJSON();
-      if (deepEqual(prevDataRef.current, data)) {
+      if (equalityDeep(prevDataRef.current, data)) {
         return prevDataRef.current;
       } else {
         prevDataRef.current = data;
