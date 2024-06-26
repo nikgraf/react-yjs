@@ -24,8 +24,17 @@ pnpm dev
 pnpm test
 ```
 
+## Adding a new Changeset
+
+In root run:
+
+```bash
+pnpm changeset
+```
+
 ## Publishing
 
 ```bash
+pnpm changeset version
 pnpm release
 ```
