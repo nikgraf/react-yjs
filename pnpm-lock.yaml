@@ -83,6 +83,10 @@ importers:
         version: 5.2.13(@types/node@20.14.2)(terser@5.31.1)
 
   packages/react-yjs:
+    dependencies:
+      lib0:
+        specifier: ^0.2.94
+        version: 0.2.94
     devDependencies:
       '@testing-library/dom':
         specifier: ^10.1.0
