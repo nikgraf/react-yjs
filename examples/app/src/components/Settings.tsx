@@ -7,7 +7,7 @@ export const Settings: React.FC = () => {
     // initialize a Y.Doc and get the settings
     // when the component mounts
     const yDoc = new Y.Doc();
-    const ySettings = yDoc.getMap("settings");
+    const ySettings = yDoc.getMap<boolean>("settings");
     ySettings.set("weeklyReminderEmail", true);
     return ySettings;
   });
