@@ -1,5 +1,6 @@
 import { equalityDeep } from "lib0/function";
-import { useRef, useSyncExternalStore } from "react";
+import { useRef } from "react";
+import { useSyncExternalStore } from "use-sync-external-store/shim";
 import * as Y from "yjs";
 import { YJsonValue } from "./types.js";
 
