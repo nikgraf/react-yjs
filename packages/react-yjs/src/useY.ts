@@ -8,7 +8,7 @@ type YTypeToJson<YType> =
     ? Array<YTypeToJson<Value>>
     : YType extends Y.Map<infer MapValue>
       ? { [key: string]: YTypeToJson<MapValue> }
-      : YType extends Y.XmlFragment | Y.XmlText
+      : YType extends Y.XmlFragment | Y.XmlText | Y.Text
         ? string
         : YType;
 
